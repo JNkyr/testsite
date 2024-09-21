@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>Рекламная компания "Флагман Принт"</title>
+	  
+	<!-- Montserrat -->
+	  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .main-btn {
+ 		background-color: white;
+        border: 2px solid red;
+        border-radius: 10px;
+        color: red;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px; /* Устанавливаем расстояние между кнопками 1px */
+		line-height: 1.8; /* Увеличивает высоту строки, что делает кнопку выше */
+    }
+
+    .sub-btn {
+        background-color: red;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        display: block;
+        margin: 1px 0; /* Устанавливаем расстояние между кнопками 1px */
+        text-align: center;
+    }
+
+    .accordion .card {
+        border: none; /* Убираем рамку карточки */
+        background-color: transparent; /* Сделаем фон карточек прозрачным */
+        margin-bottom: 1px; /* Устанавливаем расстояние между карточками (кнопками) 1px */
+    }
+
+    .accordion .card-header {
+        background-color: transparent; /* Сделаем фон заголовков карточек прозрачным */
+        border: none; /* Убираем рамку */
+    }
+
+    .accordion .card-body {
+        padding: 0; /* Убираем внутренние отступы */
+    }
+
+    .accordion .nav-link {
+        border-radius: 10px; /* Округляем края кнопок, если требуется */
+    }
+
+    .nav-link.main-btn {
+        margin: 0; /* Убираем верхний и нижний отступы у главных кнопок */
+    }
+
+    .nav-link.sub-btn {
+        margin: 0; /* Убираем верхний и нижний отступы у подменю */
+    }
+</style>
+
+ 
+     <!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200, // продолжительность анимации
+    delay: 200, // задержка перед началом анимации
+  });
+</script>
+	 
+	 
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+
+  <!-- whatsapp widget -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <style>
+        /* Стили для кнопки WhatsApp */
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .modal-header, .modal-footer {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+  
+  <!-- отступы для текста -->
+    <style>
+        p {
+            margin-left: 20px; /* Отступ слева */
+            margin-right: 20px; /* Отступ справа */
+        }
+		
+		h1 {
+            margin-left: 20px; /* Отступ слева */
+            margin-right: 20px; /* Отступ справа */
+        }
+		
+		h2 {
+            margin-left: 20px; /* Отступ слева */
+            margin-right: 20px; /* Отступ справа */
+        }
+
+		h3 {
+            margin-left: 20px; /* Отступ слева */
+            margin-right: 20px; /* Отступ справа */
+        }
+
+		h4 {
+            margin-left: 20px; /* Отступ слева */
+            margin-right: 20px; /* Отступ справа */
+        }
+    </style>
+
+  <!-- выравнивание галереи по центру страницы -->	
+	<style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Выровнять по центру */
+            gap: 10px; /* Отступ между изображениями */
+        }
+
+        .gallery img {
+            max-width: 100%; /* Ограничить максимальную ширину */
+            height: auto; /* Высота будет автоматически подстраиваться */
+            border: 2px solid #ccc; /* Пример рамки */
+            border-radius: 5px; /* Закругленные углы */
+        }
+    </style>
+	
+  </head>
+  <body style="padding-top: 70px">
+  
+    <!-- Иконка WhatsApp -->
+    <div class="whatsapp-icon">
+        <img src="images/whatsapp_logo.png" alt="WhatsApp" width="60" height="60" data-toggle="modal" data-target="#phoneModal">
+    </div>
+
+    <!-- Модальное окно выбора телефона -->
+    <div class="modal fade" id="phoneModal" tabindex="-1" aria-labelledby="phoneModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="phoneModalLabel">Выберите номер</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn btn-primary phone-button" data-phone="996559500426">0559 50 04 26</button>
+                    <button class="btn btn-primary phone-button" data-phone="996706500426">0706 50 04 26</button>
+                    <button class="btn btn-primary phone-button" data-phone="996552269000">0552 26 90 00</button>
+					
+	<!-- extra phone numbers for the whatsapp modal window
+                    <button class="btn btn-primary phone-button" data-phone="996700269000">0700 26 90 00</button>
+                    <button class="btn btn-primary phone-button" data-phone="996700269000">0700 26 90 00</button>
+	 -->				
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Обработка нажатия на кнопку телефона
+        document.querySelectorAll('.phone-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const phoneNumber = this.getAttribute('data-phone');
+                const whatsappUrl = `https://wa.me/${phoneNumber}`;
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+    </script>
+  
+  <div class="container-fluid">
+  <!--
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+	  -->
+  
+   <div class="container-fluid">
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-red">
+    <a class="navbar-brand" href="index.html"><img src="images/logo_white.png" alt="" width="119" height="55" class="img-fluid"/></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item disabled"><a class="nav-link" href="#">Рекламная компания "Флагман&nbsp;Принт"</a></li>
+            <li class="nav-item"><a class="nav-link" href="tel:+996559500426">0559&nbsp;50&nbsp;04&nbsp;26</a></li>
+            <li class="nav-item"><a class="nav-link" href="tel:+996706500426">0706&nbsp;50&nbsp;04&nbsp;26</a></li>
+            <li class="nav-item"><a class="nav-link" href="tel:+996552269000">0552&nbsp;26&nbsp;90&nbsp;00</a></li>
+            <li class="nav-item"><a class="nav-link" href="tel:+996700269000">0700&nbsp;26&nbsp;90&nbsp;00</a></li>
+            <li class="nav-item disabled"><a class="nav-link" href="#">г.Бишкек, ул.&nbsp;Салиевой, 53Б/1</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+	   
+<div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" style="background-color: grey">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+<div class="carousel-item active"> <img class="d-block mx-auto img-fluid" src="images/carousel3.jpg" alt="First slide">
+		<!-- Slide caption
+        <div class="carousel-caption">
+          <h5>First slide Heading</h5>
+          <p>First slide Caption</p>
+        </div>
+        -->
+      </div>
+      <div class="carousel-item"> <img class="d-block mx-auto img-fluid" src="images/carousel2.jpg" alt="Second slide">
+        <!-- Slide caption 
+		  <div class="carousel-caption">
+          <h5>Second slide Heading</h5>
+          <p>Second slide Caption</p>
+        </div>
+        -->
+      </div>
+      <div class="carousel-item"> <img class="d-block mx-auto img-fluid" src="images/carousel1.jpg" alt="Third slide">
+       <!-- Slide caption
+		  <div class="carousel-caption">
+          <h5>Third slide Heading</h5>
+          <p>Third slide Caption</p>
+        </div>
+		-->
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+</div>
+  <div class="container-fluid">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-6">&nbsp;</div>
+        <div class="col-xl-6">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+<div class="container-fluid"> 
+	  
+<!-- Аккордеон для мобильных устройств -->
+<div class="accordion d-lg-none" id="accordionMenu">
+    <div class="card">
+        <div class="card-header" id="headingA1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="narujnayareklama.html" data-toggle="collapse" data-target="#collapseA1" aria-expanded="true" aria-controls="collapseA1">
+                    НАРУЖНАЯ РЕКЛАМА
+                </a>
+            </h5>
+        </div>
+        <div id="collapseA1" class="collapse" aria-labelledby="headingA1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="narujnayareklama.html#obyemnyesvetovyebukvy">Объемные буквы световые</a>
+                <a class="sub-btn" href="narujnayareklama.html#svetovyekoroba">Световые короба</a>
+                <a class="sub-btn" href="narujnayareklama.html#oformleniyfasadov">Оформление фасадов</a>
+                <a class="sub-btn" href="narujnayareklama.html#kryshnyeustanovki">Крышные установки</a>
+                <a class="sub-btn" href="narujnayareklama.html#panelkronshteyn">Панель-кронштейн</a>
+                <a class="sub-btn" href="narujnayareklama.html#stelly">Стеллы</a>
+                <a class="sub-btn" href="narujnayareklama.html#bannery">Баннерные растяжки</a>
+                <a class="sub-btn" href="narujnayareklama.html#neonovayareklama">Неоновая реклама</a>
+                <a class="sub-btn" href="narujnayareklama.html#adresnyetablichki">Адресные таблички</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingB1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="interyernayareklama.html" data-toggle="collapse" data-target="#collapseB1" aria-expanded="false" aria-controls="collapseB1">
+                    ИНТЕРЬЕРНАЯ РЕКЛАМА
+                </a>
+            </h5>
+        </div>
+        <div id="collapseB1" class="collapse" aria-labelledby="headingB1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="interyernayareklama.html#bukvynesvetovye.html">Буквы несветовые</a>
+                <a class="sub-btn" href="interyernayareklama.html#psevdoobemnyebukvy">Псевдообъемные буквы</a>
+                <a class="sub-btn" href="interyernayareklama.html#kristallajt">Кристаллайт</a>
+                <a class="sub-btn" href="interyernayareklama.html#akrillajt">Акриллайт</a>
+                <a class="sub-btn" href="interyernayareklama.html#ultratonkijlajtboks">Ультратонкий лайтбокс</a>
+                <a class="sub-btn" href="interyernayareklama.html#informacionnyestendy">Информационные стенды</a>
+                <a class="sub-btn" href="interyernayareklama.html#kabinetnyetablichki">Кабинетные таблички</a>
+                <a class="sub-btn" href="interyernayareklama.html#oformleniemestprodazh">Оформление мест продаж</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingC1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="ledtablo.html" data-toggle="collapse" data-target="#collapseC1" aria-expanded="false" aria-controls="collapseC1">
+                    LED ТАБЛО
+                </a>
+            </h5>
+        </div>
+        <div id="collapseC1" class="collapse" aria-labelledby="headingC1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="ledtablo.html#svetodiodnyebegushchiestrok">Светодиодные бегущие сроки</a>
+                <a class="sub-btn" href="ledtablo.html#elektronnyekursoviki">Электронные курсовики</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingD1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="shirokoformatnayapechat.html" data-toggle="collapse" data-target="#collapseD1" aria-expanded="false" aria-controls="collapseD1">
+                    ШИРОКОФОРМАТНАЯ ПЕЧАТЬ/ ВЫСОКОТОЧНАЯ ПЕЧАТЬ
+                </a>
+            </h5>
+        </div>
+        <div id="collapseD1" class="collapse" aria-labelledby="headingD1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="shirokoformatnayapechat.html#banneryiperfobannery">Баннеры и перфобаннеры</a>
+                <a class="sub-btn" href="shirokoformatnayapechat.html#plenkiiperfoplenki">Пленки и перфопленки</a>
+                <a class="sub-btn" href="shirokoformatnayapechat.html#postery">Постеры</a>
+                <a class="sub-btn" href="shirokoformatnayapechat.html#naklejkinaokna">Наклейки на окна</a>
+                <a class="sub-btn" href="shirokoformatnayapechat.html#brendirovanieavto">Брендирование авто</a>
+                <a class="sub-btn" href="shirokoformatnayapechat.html#fotooboi">Фотообои</a>
+                <a class="sub-btn" href="shirokoformatnayapechat.html#pechatnaholste">Печать на холсте</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingE1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="uslugi.html" data-toggle="collapse" data-target="#collapseE1" aria-expanded="false" aria-controls="collapseE1">
+                    УСЛУГИ
+                </a>
+            </h5>
+        </div>
+        <div id="collapseE1" class="collapse" aria-labelledby="headingE1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="uslugi.html#svarka">Сварочные услуги</a>
+                <a class="sub-btn" href="uslugi.html#frezer">Фрезерная резка</a>
+                <a class="sub-btn" href="uslugi.html#frezer">Лазерная резка</a>
+                <a class="sub-btn" href="uslugi.html#avtovyshka">Автовышка</a>
+                <a class="sub-btn" href="uslugi.html#designmontaj">Дизайн рекламы</a>
+                <a class="sub-btn" href="uslugi.html#designmontaj">Монтаж наружной рекламы</a>
+                <a class="sub-btn" href="uslugi.html#dostavka">Доставка</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingF1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="tipografiya.html" data-toggle="collapse" data-target="#collapseF1" aria-expanded="false" aria-controls="collapseF1">
+                    ТИПОГРАФИЯ
+                </a>
+            </h5>
+        </div>
+        <div id="collapseF1" class="collapse" aria-labelledby="headingF1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="tipografiya.html#operativnayapoligrafiya">Оперативная полиграфия</a>
+                <a class="sub-btn" href="tipografiya.html#vizitkilistovki">Визитки, листовки</a>
+                <a class="sub-btn" href="tipografiya.html#diskontnyekarty">Дисконтные пластиковые карты</a>
+                <a class="sub-btn" href="tipografiya.html#katalogimenyu">Каталоги, меню</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingG1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="suvenirnayaprodukziya.html" data-toggle="collapse" data-target="#collapseG1" aria-expanded="false" aria-controls="collapseG1">
+                    СУВЕНИРНАЯ ПРОДУКЦИЯ
+                </a>
+            </h5>
+        </div>
+        <div id="collapseG1" class="collapse" aria-labelledby="headingG1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="suvenirnayaprodukziya.html#pechatnakruzhkah">Печать на кружках</a>
+                <a class="sub-btn" href="suvenirnayaprodukziya.html#pechatnatkani.">Печать на ткани</a>
+                <a class="sub-btn" href="suvenirnayaprodukziya.html#izdeliyaizdereva">Изделия из дерева</a>
+                <a class="sub-btn" href="suvenirnayaprodukziya.html#izdeliyaizakrila">Изделия из акрила</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- container-fluid with menu for desktops and content -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 d-none d-lg-block">
+            <!-- Левое меню для десктопов -->
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link main-btn3" href="narujnayareklama.html">НАРУЖНАЯ РЕКЛАМА</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="narujnayareklama.html#obyemnyesvetovyebukvy">Объёмные световые буквы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="narujnayareklama.html#svetovyekoroba">Световые короба</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="narujnayareklama.html#oformleniyfasadov">Оформление фасадов</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="narujnayareklama.html#kryshnyeustanovki">Крышные установки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="narujnayareklama.html#panelkronshteyn">Панель-кронштейн</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="narujnayareklama.html#stelly">Стеллы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="narujnayareklama.html#bannery">Баннерные растяжки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="narujnayareklama.html#neonovayareklama">Неоновая реклама</a>
+                        </li>
+                      <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="narujnayareklama.html#adresnyetablichki">Адресные таблички</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link main-btn" href="interyernayareklama.html">ИНТЕРЬЕРНАЯ РЕКЛАМА</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#bukvynesvetovye">Буквы несветовые</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#psevdoobemnyebukvy">Псевдообъемные буквы</a>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#kristallajt">Кристаллайт</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#akrillajt">Акриллайт</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#ultratonkijlajtboks">Ультратонкий лайтбокс</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#informacionnyestendy">Информационные стенды</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#kabinetnyetablichki">Кабинетные таблички</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#oformleniemestprodazh">Оформление мест продаж</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link main-btn3" href="ledtablo.html">LED ТАБЛО</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="ledtablo.html#svetodiodnyebegushchiestrok">Светодиодные бегущие строки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="ledtablo.html#elektronnyekursoviki">Электронные курсовики</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link main-btn2" href="shirokoformatnayapechat.html">ШИРОКОФОРМАТНАЯ ПЕЧАТЬ / ВЫСОКОТОЧНАЯ ПЕЧАТЬ</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="shirokoformatnayapechat.html#banneryiperfobannery">Баннеры и перфобаннеры</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link sub-btn" href="shirokoformatnayapechat.html#plenkiiperfoplenki">Плёнки и перфоплёнки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="shirokoformatnayapechat.html#postery">Постеры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="shirokoformatnayapechat.html#naklejkinaokna">Наклейки на окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="shirokoformatnayapechat.html#brendirovanieavto">Брендирование авто</a>
+                        </li>
+                        <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="shirokoformatnayapechat.html#fotooboi">Фотообои</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="shirokoformatnayapechat.html#pechatnaholste">Печать на холсте</a>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link main-btn3" href="uslugi.html#uslugi">УСЛУГИ</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="uslugi.html#svarka">Сварочные услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="uslugi.html#frezer">Фрезерная резка</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="uslugi.html#frezer">Лазерная резка</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="uslugi.html#avtovyshka">Автовышка</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="uslugi.html#designmontaj">Дизайн рекламы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="uslugi.html#designmontaj">Монтаж наружной рекламы</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="uslugi.html#dostavka">Доставка</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link main-btn3" href="tipografiya.html">ТИПОГРАФИЯ</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="tipografiya.html#operativnayapoligrafiya">Оперативная полиграфия</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="tipografiya.html#vizitkilistovki">Визитки, листовки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="tipografiya.html#diskontnyekarty">Дисконтные пластиковые карты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="tipografiya.html#katalogimenyu">Каталоги, меню</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link main-btn" href="suvenirnayaprodukziya.html">СУВЕНИРНАЯ ПРОДУКЦИЯ</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="suvenirnayaprodukziya.html#pechatnakruzhkah">Печать на кружках</a>
+                        </li>
+                      <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="suvenirnayaprodukziya.html#pechatnatkani">Печать на ткани</a>
+                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="suvenirnayaprodukziya.html#izdeliyaizdereva">Изделия из дерева</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="suvenirnayaprodukziya.html#izdeliyaizakrila">Изделия из акрила</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-9 offset-xl-1 ml-5">
+            <!-- Контент -->
+			
+<!-- ШИРОКОФОРМАТНАЯ ПЕЧАТЬ/ ВЫСОКОТОЧНАЯ ПЕЧАТЬ -->
+		<p id="shirokoformatnayapechat">&nbsp;</p><br>
+            <h1><font color="red">ШИРОКОФОРМАТНАЯ ПЕЧАТЬ/ ВЫСОКОТОЧНАЯ ПЕЧАТЬ</font></h1>
+<h4>Широкоформатная печать: масштабные решения для впечатляющих результатов</h4>
+
+<p>Широкоформатная печать – это технология, позволяющая создавать изображения и графику на больших форматах, значительно превосходящих стандартные размеры бумаги. Она широко применяется для рекламных баннеров, выставочных стендов, наружной рекламы, а также для создания декоративных элементов, карт, плакатов и других материалов.</p>
+
+<p>Ключевое преимущество широкоформатной печати – возможность создавать эффектные изображения с высокой детализацией, которые способны привлечь внимание и передать необходимую информацию.</p>
+
+<h4>Высокоточная печать: точность и качество на высшем уровне</h4>
+
+<p>Высокоточная печать, в свою очередь, фокусируется на безупречном качестве изображения и точности передачи деталей. Эта технология часто применяется для создания высококачественной фотопечати, репродукций, плакатов, рекламных материалов, а также для упаковки и этикеток.</p>
+
+<p>Ключевой особенностью высокоточной печати является использование высококачественных материалов, а также специальных красок и технологий, которые позволяют получить изображение с максимально точной цветопередачей и четкими линиями.</p>
+
+<h4>Сочетание масштабов и точности: идеальный баланс для любого проекта</h4>
+
+<p>Объединяя возможности широкоформатной печати и высокоточной печати, можно создавать впечатляющие изображения и графику, которые отличаются не только масштабностью, но и безупречной детализацией.</p>
+
+<p>Такой подход позволяет создавать уникальные рекламные кампании, оформлять выставки и мероприятия, а также создавать высококачественную продукцию для различных сфер деятельности.</p>
+
+<p>Выбор технологии зависит от конкретных потребностей проекта, бюджета и желаемого качества изображения.</p>
+
+<p>Широкоформатная и высокоточная печать: ключевые элементы современной визуальной коммуникации</p>
+
+<p>Широкоформатная и высокоточная печать являются неотъемлемыми элементами современной визуальной коммуникации. Они позволяют создавать эффектные и информативные изображения, которые привлекают внимание, запоминаются и влияют на принятие решений.</p>
+
+<p>От рекламы до декора, от дизайна до упаковки, широкоформатная и высокоточная печать играют важную роль в формировании визуального образа бренда, продукции и услуг.</p>
+<div class="gallery">
+    <img src="images/shirokoformat1.jpg" alt="shirokoformat1" data-aos="zoom-in" />
+    <img src="images/shirokoformat2.jpg" alt="shirokoformat2" data-aos="zoom-in" />
+    <img src="images/shirokoformat3.jpg" alt="shirokoformat3" data-aos="zoom-in" />
+	<img src="images/shirokoformat4.jpg" alt="shirokoformat4" data-aos="zoom-in" />
+    <img src="images/shirokoformat5.jpg" alt="shirokoformat5" data-aos="zoom-in" />
+    <img src="images/shirokoformat6.jpg" alt="shirokoformat6" data-aos="zoom-in" />
+	<!--
+    <img src="images/shirokoformat7.jpg" alt="shirokoformat7" data-aos="zoom-in" />
+    <img src="images/shirokoformat8.jpg" alt="shirokoformat8" data-aos="zoom-in" />
+    <img src="images/shirokoformat9.jpg" alt="shirokoformat9" data-aos="zoom-in" />
+	-->
+</div>
+
+
+<!-- Баннеры и перфобаннеры -->
+		<p id="banneryiperfobannery">&nbsp;</p><br>
+            <h1><a href="shirokoformatnayapechat.html#shirokoformatnayapechat" style="color: red;">ШИРОКОФОРМАТНАЯ ПЕЧАТЬ/ ВЫСОКОТОЧНАЯ ПЕЧАТЬ</a></h1>
+            <h2>Баннеры и перфобаннеры</h2>
+<p>Баннеры и перфобаннеры представляют собой эффективные инструменты рекламной и информационной кампании. Они широко используются для привлечения внимания к продуктам и услугам, оформления мероприятий и создания брендовой атмосферы. Широкоформатная печать позволяет создавать большие и яркие изображения, которые легко заметны даже издалека, что делает баннеры незаменимыми в наружной рекламе.</p>
+
+<p>Перфобаннеры, в свою очередь, представляют собой специальный вид баннеров с отверстиями, которые обеспечивают циркуляцию воздуха. Это снижает риск повреждения баннера при сильном ветре и позволяет использовать их в условиях, где стандартные баннеры могут быть неэффективными. Они идеально подходят для установки на фасадах зданий и ограждениях, обеспечивая одновременно рекламу и защиту от неблагоприятных погодных условий.</p>
+
+<p>Процесс широкоформатной печати отличается высоким качеством и точностью. Использование современных технологий и оборудования позволяет достигать ярких и насыщенных цветовых решений, а также детализированных изображений, что особенно важно для визуального восприятия рекламы. Высокоточная печать обеспечивает четкость и яркость каждого элемента дизайна, что способствует лучшему запоминанию информации потенциальными клиентами.</p>
+
+<p>Кроме того, широкий формат печати открывает новые возможности для креативности. Баннеры могут принимать самые разные формы и размеры, что позволяет дизайнерам реализовать нестандартные идеи и необычные концепты. К примеру, использование света и объемных конструкций может существенно повысить эффект от рекламной кампании.</p>
+
+<p>Еще одной важной особенностью перфобаннеров является их долговечность и прочность. Они изготовлены из качественных материалов, что позволяет им выдерживать нагрузки, связанные с погодными условиями и продолжительным сроком эксплуатации. Это делает их привлекательными для бизнеса, желающего инвестировать в надежную и эффективную рекламу.</p>
+
+<p>Таким образом, баннеры и перфобаннеры, выполненные с использованием широкоформатной и высокоточной печати, являются важными инструментами для продвижения брендов. Они помогают не только донести информацию до целевой аудитории, но и создать яркий образ компании, способствуя успешному продвижению на рынке.</p>
+<div class="gallery">
+    <img src="images/banner1.jpg" alt="banner1" data-aos="zoom-in" />
+    <img src="images/banner2.jpg" alt="banner2" data-aos="zoom-in" />
+    <img src="images/banner3.jpg" alt="banner3" data-aos="zoom-in" />
+	<img src="images/banner4.jpg" alt="banner4" data-aos="zoom-in" />
+    <img src="images/banner5.jpg" alt="banner5" data-aos="zoom-in" />
+    <img src="images/banner6.jpg" alt="banner6" data-aos="zoom-in" />
+    <!--
+	<img src="images/banner7.jpg" alt="banner7" data-aos="zoom-in" />
+    <img src="images/banner8.jpg" alt="banner8" data-aos="zoom-in" />
+    <img src="images/banner9.jpg" alt="banner9" data-aos="zoom-in" />
+	-->
+</div>
+
+<!-- Пленки и перфопленки -->
+            <p id="plenkiiperfoplenki">&nbsp;</p><br>
+            <h1><a href="shirokoformatnayapechat.html#shirokoformatnayapechat" style="color: red;">ШИРОКОФОРМАТНАЯ ПЕЧАТЬ/ ВЫСОКОТОЧНАЯ ПЕЧАТЬ</a></h1>
+            <h2>Пленки и перфопленки</h2>
+<p>Широкоформатная печать на самоклеющейся пленке и перфопленке открывает новые горизонты для рекламного дизайна и оформления интерьеров. Эти технологии позволяют создавать яркие и насыщенные изображения, которые сразу же привлекают внимание. Широкоформатные принтеры способны воспроизводить высокое разрешение, что делает каждую деталь четкой и ясной. Это особенно важно для рекламы, где визуальное восприятие играет ключевую роль.</p>
+
+<p>Самоклеющаяся пленка — это универсальный материал, практически незаменимый для наружной и внутренней рекламы. Она легко наносится на любые поверхности и прекрасно выдерживает различные атмосферные условия. Благодаря своей гибкости и прочности, такие наклейки могут использоваться как на сведении, так и на более сложных формах. Высокояркие цвета и высокая детализация делают печать на самоклеящейся пленке оптимальным выбором для создания вывесок, наклеек и рекламных материалов.</p>
+
+<p>Перфопленка, в свою очередь, обладает уникальными свойствами, которые позволяют создавать эффектные визуальные элементы. Это идеальное решение для оконных наклеек и наружной рекламы. Такой подход активно используется в торговых центрах и офисах, где важно сохранять комфортную атмосферу, не прерывая рекламную коммуникацию.</p>
+
+<p>Высокоточная печать на этих материалах обеспечивает прекрасное качество изображения. Технологии, используемые в широкоформатной печати, позволяют добиться впечатляющей четкости и детализации, что особенно важно для сложных графических элементов и текстов. Профессиональные принтеры, работающие с экологически чистыми чернилами, обеспечивают долговечность и яркость печати, что способствует удержанию внимания потребителей.</p>
+
+<p>Также стоит отметить, что печать на самоклеящейся и перфопленке — это не только эффектная, но и экономически выгодная альтернатива традиционной рекламе. Быстрая печать и легкое нанесение уменьшают затраты на производственные процессы. Кроме того, возможность оперативного обновления информации и дизайна позволяет компаниям быстро реагировать на изменения в рыночной ситуации.</p>
+
+<p>В заключение, широкоформатная печать на самоклеящейся пленке и перфопленке — это мощный инструмент для рекламы и оформления пространства. Эти технологии обеспечивают высокое качество, привлекательный внешний вид и практическое применение, что делает их востребованными в самых разных областях. Выбирая такие решения, компании могут эффективно продвигать свои товары и услуги, оставляя яркое впечатление у клиентов.</p>
+<div class="gallery">
+    <img src="images/plenka1.jpg" alt="plenka1" data-aos="zoom-in" />
+    <img src="images/plenka2.jpg" alt="plenka2" data-aos="zoom-in" />
+    <img src="images/plenka3.jpg" alt="plenka3" data-aos="zoom-in" />
+	<!--
+    <img src="images/plenka4.jpg" alt="plenka4" data-aos="zoom-in" />
+    <img src="images/plenka5.jpg" alt="plenka5" data-aos="zoom-in" />
+    <img src="images/plenka6.jpg" alt="plenka6" data-aos="zoom-in" />
+    <img src="images/plenka7.jpg" alt="plenka7" data-aos="zoom-in" />
+    <img src="images/plenka8.jpg" alt="plenka8" data-aos="zoom-in" />
+    <img src="images/plenka9.jpg" alt="plenka9" data-aos="zoom-in" />
+	-->
+</div>
+
+<!-- Постеры -->
+            <p id="postery">&nbsp;</p><br>
+            <h1><a href="shirokoformatnayapechat.html#shirokoformatnayapechat" style="color: red;">ШИРОКОФОРМАТНАЯ ПЕЧАТЬ/ ВЫСОКОТОЧНАЯ ПЕЧАТЬ</a></h1>
+            <h2>Постеры</h2>
+<p>Широкоформатная печать — это современная технология, которая позволяет создавать яркие и впечатляющие постеры для различных целей. Постеры, выполненные с помощью этой технологии, могут быть использованы для рекламных кампаний, выставок, мероприятий, а также в оформлении интерьеров. Широкоформатная печать открывает безграничные возможности для дизайнеров и маркетологов, позволяя им реализовывать самые смелые идеи.</p>
+
+<p>Одним из главных преимуществ широкоформатной печати является возможность печати на разнообразных материалах. В отличие от традиционных методов, которые ограничивают выбор бумаги, широкоформатная печать может использовать пленку, холст, флаговое полотно и другие специализированные материалы. Это позволяет создавать постеры, которые не только привлекают внимание, но и обладают высокой прочностью и стойкостью к внешним воздействиям.</p>
+
+<p>Кроме того, широкоформатная печать обеспечивает высокое качество изображения. Современные печатные машины способны воспроизводить мельчайшие детали и яркие цвета, что делает постеры более выразительными. Это особенно важно для рекламных материалов, где качество изображения способно повлиять на восприятие бренда и желание клиента совершить покупку.</p>
+
+<p>Другим существенным преимуществом является скорость производства. При использовании широкоформатной печати можно значительно сократить время на изготовление постеров - от идеи до готового продукта. Это особенно актуально в условиях быстро меняющегося рынка, где оперативность порой играет ключевую роль.</p>
+
+<p>Эффективность постеров в маркетинге и рекламе тоже нельзя недооценивать. Они привлекают внимание и способны мгновенно донести сообщение до целевой аудитории. Яркие изображения и лаконичные слоганы в сочетании с качественной печатью делают постеры мощным инструментом для продвижения товаров и услуг.</p>
+
+<p>Таким образом, широкоформатная печать постеров представляет собой универсальное и эффективное решение для оформления и рекламы. С помощью этой технологии можно создать уникальные, привлекательные и информативные материалы, которые будут выделяться на фоне конкуренции и запоминаться целевой аудиторией.</p>
+<div class="gallery">
+    <img src="images/poster1.jpg" alt="poster1" data-aos="zoom-in" />
+    <img src="images/poster2.jpg" alt="poster2" data-aos="zoom-in" />
+    <img src="images/poster3.jpg" alt="poster3" data-aos="zoom-in" />
+	<!--
+    <img src="images/poster4.jpg" alt="poster4" data-aos="zoom-in" />
+    <img src="images/poster5.jpg" alt="poster5" data-aos="zoom-in" />
+    <img src="images/poster6.jpg" alt="poster6" data-aos="zoom-in" />
+    <img src="images/poster7.jpg" alt="poster7" data-aos="zoom-in" />
+    <img src="images/poster8.jpg" alt="poster8" data-aos="zoom-in" />
+    <img src="images/poster9.jpg" alt="poster9" data-aos="zoom-in" />
+	-->
+</div>
+
+<!-- Наклейки на окна -->
+            <p id="naklejkinaokna">&nbsp;</p><br>
+            <h1><a href="shirokoformatnayapechat.html#shirokoformatnayapechat" style="color: red;">ШИРОКОФОРМАТНАЯ ПЕЧАТЬ/ ВЫСОКОТОЧНАЯ ПЕЧАТЬ</a></h1>
+            <h2>Наклейки на окна</h2>
+<p>Наклейки на окна стали неотъемлемой частью современного оформления офисов, магазинов и жилых помещений. Широкоформатная печать открывает новые горизонты для креативного использования оконных пространств. С помощью данного метода можно создать яркие и запоминающиеся изображения, которые не только украсят интерьер, но и привлекут внимание потенциальных клиентов.</p>
+
+<p>Одним из главных преимуществ наклеек на окна является их универсальность. Их можно использовать как для коммерческих целей, так и для личного оформления. На витринах магазинов можно размещать рекламные акции, а в офисах — мотивационные цитаты или фирменные логотипы. Широкоформатная печать позволяет передать все детали изображений, что способствует повышению интереса к продукции или услугам.</p>
+
+<p>Материалы, используемые для печати наклеек, обладают высокой стойкостью к внешним воздействиям. Они не выгорают на солнце, не боятся дождя и морозов, что делает наклейки идеальными для наружного применения. Кроме того, такие изделия легко наклеиваются и снимаются при необходимости, не оставляя следов. Это особенно важно для арендаторов, которым нужно изменять оформление пространства периодически.</p>
+
+<p>Процесс создания наклеек на окна начинается с разработки уникального дизайна. Специалисты по графическому дизайну могут помочь воплотить в жизнь любую идею, соответствующую требованиям клиента. После утверждения дизайна осуществляется печать на современном оборудовании, что гарантирует высокое качество и насыщенность цветов. Затем наклейки нарезаются и готовятся к установке.</p>
+
+<p>Широкоформатные наклейки на окна привносят в пространство не только эстетику, но и функциональность. Они могут выполнять роль солнцезащитных пленок, уменьшая яркость света и защищая от перегрева. Это особенно актуально для офисов, где важен комфорт сотрудников. Таким образом, наклейки не только украшают, но и делают помещение более комфортным для работы и отдыха.</p>
+
+<p>В заключение, наклейки на окна, выполненные с помощью широкоформатной печати, — это эффективное и креативное решение для оформления любого пространства. Они позволяют сочетать красоту и практичность, что делает их востребованными в различных сферах. Инвестируя в качественные наклейки, можно существенно улучшить визуальный облик и функциональность помещения, привлекая к нему больше внимания.</p>
+<div class="gallery">
+    <img src="images/okna1.jpg" alt="okna1" data-aos="zoom-in" />
+    <img src="images/okna2.jpg" alt="okna2" data-aos="zoom-in" />
+    <img src="images/okna3.jpg" alt="okna3" data-aos="zoom-in" />
+	<!--
+    <img src="images/okna4.jpg" alt="okna4" data-aos="zoom-in" />
+    <img src="images/okna5.jpg" alt="okna5" data-aos="zoom-in" />
+    <img src="images/okna6.jpg" alt="okna6" data-aos="zoom-in" />
+    <img src="images/okna7.jpg" alt="okna7" data-aos="zoom-in" />
+    <img src="images/okna8.jpg" alt="okna8" data-aos="zoom-in" />
+    <img src="images/okna9.jpg" alt="okna9" data-aos="zoom-in" />
+	-->
+</div>
+
+<!-- Брендирование авто -->
+            <p id="brendirovanieavto">&nbsp;</p><br>
+            <h1><a href="shirokoformatnayapechat.html#shirokoformatnayapechat" style="color: red;">ШИРОКОФОРМАТНАЯ ПЕЧАТЬ/ ВЫСОКОТОЧНАЯ ПЕЧАТЬ</a></h1>
+            <h2>Брендирование авто</h2>
+<p>Брендирование автомобилей с использованием широкоформатной печати стало популярным и эффективным способом продвижения товаров и услуг. Этот метод позволяет создать яркое и запоминающееся визуальное представление компании, привлекая внимание потенциальных клиентов на улице и в деловых центрах. Брендированные автомобили становятся мобильными рекламными носителями, которые могут охватить широкую аудиторию.</p>
+
+<p>Широкоформатная печать предоставляет множество возможностей для дизайна. С помощью современных технологий можно напечатать изображения высокого качества с яркими цветами и четкими деталями. Это позволяет создавать уникальные и креативные дизайны, которые отражают индивидуальность компании и ее философию. Кроме того, элементы брендирования могут варьироваться от небольших логотипов на дверях до масштабных изображений, покрывающих весь автомобиль.</p>
+
+<p>Одним из главных преимуществ брендирования автомобилей является его высокая эффективность. Поездки по городу или вне его обеспечивают постоянную видимость рекламы, что способствует формированию узнаваемости бренда. Автомобили с брендированием могут быть использованы как для внутренних, так и для внешних маркетинговых кампаний, увеличивая охват аудитории в самых разных местах.</p>
+
+<p>Процесс брендирования включает в себя несколько этапов: разработка дизайна, подготовка макета и печать. На этапе разработки важно учитывать требования клиента и специфику его бизнеса, чтобы создать дизайн, который максимально эффективно передаст нужное сообщение. Использование качественных материалов для печати и ламинирования также играет ключевую роль, так как это влияет на долговечность и устойчивость изображения к внешним воздействиям.</p>
+
+<p>Брендирование автомобилей можно адаптировать под любые бизнес-цели, от увеличения продаж до повышения авторитета компании на рынке. Разнообразие форматов и стилей позволяет каждому бизнесу найти свой уникальный подход, который будет работать на его имидж. Таким образом, брендирование с помощью широкоформатной печати является не только способом привлечения внимания, но и инвестицией в долгосрочную стратегию по укреплению позиций на рынке.</p>
+
+<p>В заключение, брендирование автомобилей с применением широкоформатной печати — это мощный инструмент для компаний, стремящихся выделиться среди конкурентов. Высокое качество изображения, креативный подход и мобильность делают этот метод незаменимым в современном маркетинге. Инвестируя в брендирование автомобилей, бизнес получает возможность эффективно донести свою пропозицию до потребителей и создать положительный имидж.</p>
+<div class="gallery">
+    <img src="images/avto1.jpg" alt="avto1" data-aos="zoom-in" />
+    <img src="images/avto2.jpg" alt="avto2" data-aos="zoom-in" />
+    <img src="images/avto3.jpg" alt="avto3" data-aos="zoom-in" />
+    <img src="images/avto4.jpg" alt="avto4" data-aos="zoom-in" />
+    <img src="images/avto5.jpg" alt="avto5" data-aos="zoom-in" />
+    <img src="images/avto6.jpg" alt="avto6" data-aos="zoom-in" />
+	<!--
+    <img src="images/avto7.jpg" alt="avto7" data-aos="zoom-in" />
+    <img src="images/avto8.jpg" alt="avto8" data-aos="zoom-in" />
+    <img src="images/avto9.jpg" alt="avto9" data-aos="zoom-in" />
+	-->
+</div>
+
+<!-- Фотообои -->
+            <p id="fotooboi">&nbsp;</p><br>
+            <h1><a href="shirokoformatnayapechat.html#shirokoformatnayapechat" style="color: red;">ШИРОКОФОРМАТНАЯ ПЕЧАТЬ/ ВЫСОКОТОЧНАЯ ПЕЧАТЬ</a></h1>
+            <h2>Фотообои</h2>
+<p>Фотообои с широкоформатной печатью становятся все более популярными в современных интерьерах. Они позволяют создавать уникальные и яркие изображения, способные преобразить пространство любой комнаты. Благодаря современным технологиям печати, стало возможным воспроизводить детализированные и насыщенные картинки на больших полотнах, что открывает новые горизонты для дизайнеров и владельцев жилья.</p>
+
+<p>В процессе производства фотообоев используется высококачественная фундаментальная основа и специальные чернила, которые обеспечивают долговечность и яркость изображений. Широкоформатная печать позволяет получить безшовные полотна, что делает покрытие стен более эстетичным и приятным на вид. Вы можете выбрать как готовые решения, так и заказать индивидуальный дизайн, что позволяет воплотить в жизнь самые смелые идеи.</p>
+
+<p>Одним из главных преимуществ фотообоев является их универсальность. Они отлично подходят для любых пространств — от жилых комнат до офисов и коммерческих помещений. С помощью фотообоев можно создать атмосферу уюта, стиля или даже вдохновения, в зависимости от выбранного изображения. Горы, леса, городские пейзажи или абстракция — выбор зависит только от ваших предпочтений.</p>
+
+<p>Кроме того, установка фотообоев с широкоформатной печатью достаточно проста. Многие производители предлагают обои с самоклеящимся слоем, что упрощает процесс наклеивания и не требует специальных навыков. Также они легко удаляются без повреждения стен, что делает их идеальным вариантом для арендуемого жилья.</p>
+
+<p>Уход за фотообоями тоже не вызывает затруднений. Современные материалы устойчивы к повреждениям, влаге и ультрафиолетовому излучению. С помощью мягкой ткани или губки можно легко очистить поверхность от загрязнений, что позволяет сохранять первоначальный вид покрытия на протяжении долгого времени.</p>
+
+<p>В заключение, фотообои с широкоформатной печатью — это отличное решение для тех, кто хочет обновить интерьер, сделав его более выразительным и живым. Их разнообразие, легкость в установке и уходе делают фотообои не только стильным, но и практичным выбором для любого домашнего или офисного пространства.</p>
+<div class="gallery">
+    <img src="images/fotooboi1.jpg" alt="fotooboi1" data-aos="zoom-in" />
+    <img src="images/fotooboi2.jpg" alt="fotooboi2" data-aos="zoom-in" />
+    <img src="images/fotooboi3.jpg" alt="fotooboi3" data-aos="zoom-in" />
+    <img src="images/fotooboi4.jpg" alt="fotooboi4" data-aos="zoom-in" />
+    <img src="images/fotooboi5.jpg" alt="fotooboi5" data-aos="zoom-in" />
+    <img src="images/fotooboi6.jpg" alt="fotooboi6" data-aos="zoom-in" />
+    <img src="images/fotooboi7.jpg" alt="fotooboi7" data-aos="zoom-in" />
+    <img src="images/fotooboi8.jpg" alt="fotooboi8" data-aos="zoom-in" />
+    <img src="images/fotooboi9.jpg" alt="fotooboi9" data-aos="zoom-in" />
+</div>
+
+<!-- Печать на холсте -->
+            <p id="pechatnaholste">&nbsp;</p><br>
+            <h1><a href="shirokoformatnayapechat.html#shirokoformatnayapechat" style="color: red;">ШИРОКОФОРМАТНАЯ ПЕЧАТЬ/ ВЫСОКОТОЧНАЯ ПЕЧАТЬ</a></h1>
+            <h2>Печать на холсте</h2>
+<p>Широкоформатная печать на холсте – это современный способ создания ярких, выразительных изображений, который успешно используется как в коммерческих, так и в творческих целях. Эта технология позволяет получать высококачественные графические работы большого формата, которые прекрасно подходят для оформления интерьеров, выставок и различных мероприятий. Холст, как основной материал для печати, придаёт изображениям особую текстуру и глубину, что делает их более привлекательными.</p>
+
+<p>Процесс печати на холсте начинается с выбора изображения и его подготовки. В зависимости от назначения конечного продукта, может использоваться как цифровая графика, так и фотографии. Важно правильно настроить разрешение и цветовую палитру, чтобы гарантировать максимальную детализацию и насыщенность цветов. Современные принтеры используют специальные чернила, которые обеспечивают долговечность и устойчивость к выцветанию, что делает такие изделия идеальными для долгосрочного использования.</p>
+
+<p>После завершения печати холст часто натягивается на деревянные подрамники. Этот этап является ключевым для создания финального продукта: правильно выполненное натяжение позволяет избежать складок и деформаций, а также придаёт картине законченный вид. Кроме того, художественные изображения на холсте могут дополнительно обрабатываться лаком, что придаёт им блеск и защищает от внешних воздействий.</p>
+
+<p>Широкоформатная печать на холсте широко используется в рекламе, где эффектные изображения способны привлечь внимание клиентов и создать уникальный имидж бренда. Постеры, баннеры и рекламные стенды, выполненные с помощью этой технологии, способны передать информацию ярко и запоминающе. В последние годы наблюдается рост интереса к созданию интерьерных картин, что также связано с популярностью персональных проектов и уникального дизайна.</p>
+
+<p>В художественной сфере печать на холсте становится любимым инструментом для многих авторов. Художники могут создавать тиражи своих работ, что обеспечивает им дополнительный доход. Кроме того, такие картины часто становятся востребованными на выставках и ярмарках, где художники стремятся представить свои произведения как можно широкой аудитории.</p>
+
+<p>Таким образом, широкоформатная печать на холсте открывает новые горизонты как для бизнеса, так и для творчества. Она сочетает в себе качество, доступность и эстетическое удовольствие, позволяя создавать уникальные, впечатляющие работы. Независимо от цели использования, печать на холсте остаётся одним из наиболее перспективных направлений в мире печати и искусства.</p>
+<div class="gallery">
+    <img src="images/holst1.jpg" alt="holst1" data-aos="zoom-in" />
+    <img src="images/holst2.jpg" alt="holst2" data-aos="zoom-in" />
+    <img src="images/holst3.jpg" alt="holst3" data-aos="zoom-in" />
+    <img src="images/holst4.jpg" alt="holst4" data-aos="zoom-in" />
+    <img src="images/holst5.jpg" alt="holst5" data-aos="zoom-in" />
+    <img src="images/holst6.jpg" alt="holst6" data-aos="zoom-in" />
+    <img src="images/holst7.jpg" alt="holst7" data-aos="zoom-in" />
+    <img src="images/holst8.jpg" alt="holst8" data-aos="zoom-in" />
+    <img src="images/holst9.jpg" alt="holst9" data-aos="zoom-in" />
+</div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	
+</div>
+</div>
+
+	
+	<!-- AOS --> 	
+	<script>
+  AOS.init();
+</script>
+	
+</body>
+</html>

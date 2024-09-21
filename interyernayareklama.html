@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>Рекламная компания "Флагман Принт"</title>
+	  
+	<!-- Montserrat -->
+	  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .main-btn {
+ 		background-color: white;
+        border: 2px solid red;
+        border-radius: 10px;
+        color: red;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px; /* Устанавливаем расстояние между кнопками 1px */
+		line-height: 1.8; /* Увеличивает высоту строки, что делает кнопку выше */
+    }
+
+    .sub-btn {
+        background-color: red;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        display: block;
+        margin: 1px 0; /* Устанавливаем расстояние между кнопками 1px */
+        text-align: center;
+    }
+
+    .accordion .card {
+        border: none; /* Убираем рамку карточки */
+        background-color: transparent; /* Сделаем фон карточек прозрачным */
+        margin-bottom: 1px; /* Устанавливаем расстояние между карточками (кнопками) 1px */
+    }
+
+    .accordion .card-header {
+        background-color: transparent; /* Сделаем фон заголовков карточек прозрачным */
+        border: none; /* Убираем рамку */
+    }
+
+    .accordion .card-body {
+        padding: 0; /* Убираем внутренние отступы */
+    }
+
+    .accordion .nav-link {
+        border-radius: 10px; /* Округляем края кнопок, если требуется */
+    }
+
+    .nav-link.main-btn {
+        margin: 0; /* Убираем верхний и нижний отступы у главных кнопок */
+    }
+
+    .nav-link.sub-btn {
+        margin: 0; /* Убираем верхний и нижний отступы у подменю */
+    }
+</style>
+
+ 
+     <!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200, // продолжительность анимации
+    delay: 200, // задержка перед началом анимации
+  });
+</script>
+	 
+	 
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+
+  <!-- whatsapp widget -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <style>
+        /* Стили для кнопки WhatsApp */
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .modal-header, .modal-footer {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+  
+  <!-- отступы для текста -->
+    <style>
+        p {
+            margin-left: 20px; /* Отступ слева */
+            margin-right: 20px; /* Отступ справа */
+        }
+		
+		h1 {
+            margin-left: 20px; /* Отступ слева */
+            margin-right: 20px; /* Отступ справа */
+        }
+		
+		h2 {
+            margin-left: 20px; /* Отступ слева */
+            margin-right: 20px; /* Отступ справа */
+        }
+
+		h3 {
+            margin-left: 20px; /* Отступ слева */
+            margin-right: 20px; /* Отступ справа */
+        }
+
+		h4 {
+            margin-left: 20px; /* Отступ слева */
+            margin-right: 20px; /* Отступ справа */
+        }
+    </style>
+
+  <!-- выравнивание галереи по центру страницы -->	
+	<style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Выровнять по центру */
+            gap: 10px; /* Отступ между изображениями */
+        }
+
+        .gallery img {
+            max-width: 100%; /* Ограничить максимальную ширину */
+            height: auto; /* Высота будет автоматически подстраиваться */
+            border: 2px solid #ccc; /* Пример рамки */
+            border-radius: 5px; /* Закругленные углы */
+        }
+    </style>
+	
+  </head>
+  <body style="padding-top: 70px">
+  
+    <!-- Иконка WhatsApp -->
+    <div class="whatsapp-icon">
+        <img src="images/whatsapp_logo.png" alt="WhatsApp" width="60" height="60" data-toggle="modal" data-target="#phoneModal">
+    </div>
+
+    <!-- Модальное окно выбора телефона -->
+    <div class="modal fade" id="phoneModal" tabindex="-1" aria-labelledby="phoneModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="phoneModalLabel">Выберите номер</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn btn-primary phone-button" data-phone="996559500426">0559 50 04 26</button>
+                    <button class="btn btn-primary phone-button" data-phone="996706500426">0706 50 04 26</button>
+                    <button class="btn btn-primary phone-button" data-phone="996552269000">0552 26 90 00</button>
+					
+	<!-- extra phone numbers for the whatsapp modal window
+                    <button class="btn btn-primary phone-button" data-phone="996700269000">0700 26 90 00</button>
+                    <button class="btn btn-primary phone-button" data-phone="996700269000">0700 26 90 00</button>
+	 -->				
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Обработка нажатия на кнопку телефона
+        document.querySelectorAll('.phone-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const phoneNumber = this.getAttribute('data-phone');
+                const whatsappUrl = `https://wa.me/${phoneNumber}`;
+                window.open(whatsappUrl, '_blank');
+            });
+        });
+    </script>
+  
+  <div class="container-fluid">
+  <!--
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+	  -->
+  
+   <div class="container-fluid">
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-red">
+    <a class="navbar-brand" href="index.html"><img src="images/logo_white.png" alt="" width="119" height="55" class="img-fluid"/></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item disabled"><a class="nav-link" href="#">Рекламная компания "Флагман&nbsp;Принт"</a></li>
+            <li class="nav-item"><a class="nav-link" href="tel:+996559500426">0559&nbsp;50&nbsp;04&nbsp;26</a></li>
+            <li class="nav-item"><a class="nav-link" href="tel:+996706500426">0706&nbsp;50&nbsp;04&nbsp;26</a></li>
+            <li class="nav-item"><a class="nav-link" href="tel:+996552269000">0552&nbsp;26&nbsp;90&nbsp;00</a></li>
+            <li class="nav-item"><a class="nav-link" href="tel:+996700269000">0700&nbsp;26&nbsp;90&nbsp;00</a></li>
+            <li class="nav-item disabled"><a class="nav-link" href="#">г.Бишкек, ул.&nbsp;Салиевой, 53Б/1</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+	   
+<div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" style="background-color: grey">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+<div class="carousel-item active"> <img class="d-block mx-auto img-fluid" src="images/carousel3.jpg" alt="First slide">
+		<!-- Slide caption
+        <div class="carousel-caption">
+          <h5>First slide Heading</h5>
+          <p>First slide Caption</p>
+        </div>
+        -->
+      </div>
+      <div class="carousel-item"> <img class="d-block mx-auto img-fluid" src="images/carousel2.jpg" alt="Second slide">
+        <!-- Slide caption 
+		  <div class="carousel-caption">
+          <h5>Second slide Heading</h5>
+          <p>Second slide Caption</p>
+        </div>
+        -->
+      </div>
+      <div class="carousel-item"> <img class="d-block mx-auto img-fluid" src="images/carousel1.jpg" alt="Third slide">
+       <!-- Slide caption
+		  <div class="carousel-caption">
+          <h5>Third slide Heading</h5>
+          <p>Third slide Caption</p>
+        </div>
+		-->
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+</div>
+  <div class="container-fluid">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-6">&nbsp;</div>
+        <div class="col-xl-6">&nbsp;</div>
+      </div>
+    </div>
+  </div>
+<div class="container-fluid"> 
+	  
+<!-- Аккордеон для мобильных устройств -->
+<div class="accordion d-lg-none" id="accordionMenu">
+    <div class="card">
+        <div class="card-header" id="headingA1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="narujnayareklama.html" data-toggle="collapse" data-target="#collapseA1" aria-expanded="true" aria-controls="collapseA1">
+                    НАРУЖНАЯ РЕКЛАМА
+                </a>
+            </h5>
+        </div>
+        <div id="collapseA1" class="collapse" aria-labelledby="headingA1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="narujnayareklama.html#obyemnyesvetovyebukvy">Объемные буквы световые</a>
+                <a class="sub-btn" href="narujnayareklama.html#svetovyekoroba">Световые короба</a>
+                <a class="sub-btn" href="narujnayareklama.html#oformleniyfasadov">Оформление фасадов</a>
+                <a class="sub-btn" href="narujnayareklama.html#kryshnyeustanovki">Крышные установки</a>
+                <a class="sub-btn" href="narujnayareklama.html#panelkronshteyn">Панель-кронштейн</a>
+                <a class="sub-btn" href="narujnayareklama.html#stelly">Стеллы</a>
+                <a class="sub-btn" href="narujnayareklama.html#bannery">Баннерные растяжки</a>
+                <a class="sub-btn" href="narujnayareklama.html#neonovayareklama">Неоновая реклама</a>
+                <a class="sub-btn" href="narujnayareklama.html#adresnyetablichki">Адресные таблички</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingB1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="interyernayareklama.html" data-toggle="collapse" data-target="#collapseB1" aria-expanded="false" aria-controls="collapseB1">
+                    ИНТЕРЬЕРНАЯ РЕКЛАМА
+                </a>
+            </h5>
+        </div>
+        <div id="collapseB1" class="collapse" aria-labelledby="headingB1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="interyernayareklama.html#bukvynesvetovye.html">Буквы несветовые</a>
+                <a class="sub-btn" href="interyernayareklama.html#psevdoobemnyebukvy">Псевдообъемные буквы</a>
+                <a class="sub-btn" href="interyernayareklama.html#kristallajt">Кристаллайт</a>
+                <a class="sub-btn" href="interyernayareklama.html#akrillajt">Акриллайт</a>
+                <a class="sub-btn" href="interyernayareklama.html#ultratonkijlajtboks">Ультратонкий лайтбокс</a>
+                <a class="sub-btn" href="interyernayareklama.html#informacionnyestendy">Информационные стенды</a>
+                <a class="sub-btn" href="interyernayareklama.html#kabinetnyetablichki">Кабинетные таблички</a>
+                <a class="sub-btn" href="interyernayareklama.html#oformleniemestprodazh">Оформление мест продаж</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingC1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="ledtablo.html" data-toggle="collapse" data-target="#collapseC1" aria-expanded="false" aria-controls="collapseC1">
+                    LED ТАБЛО
+                </a>
+            </h5>
+        </div>
+        <div id="collapseC1" class="collapse" aria-labelledby="headingC1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="ledtablo.html#svetodiodnyebegushchiestrok">Светодиодные бегущие сроки</a>
+                <a class="sub-btn" href="ledtablo.html#elektronnyekursoviki">Электронные курсовики</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingD1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="shirokoformatnayapechat.html" data-toggle="collapse" data-target="#collapseD1" aria-expanded="false" aria-controls="collapseD1">
+                    ШИРОКОФОРМАТНАЯ ПЕЧАТЬ/ ВЫСОКОТОЧНАЯ ПЕЧАТЬ
+                </a>
+            </h5>
+        </div>
+        <div id="collapseD1" class="collapse" aria-labelledby="headingD1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="shirokoformatnayapechat.html#banneryiperfobannery">Баннеры и перфобаннеры</a>
+                <a class="sub-btn" href="shirokoformatnayapechat.html#plenkiiperfoplenki">Пленки и перфопленки</a>
+                <a class="sub-btn" href="shirokoformatnayapechat.html#postery">Постеры</a>
+                <a class="sub-btn" href="shirokoformatnayapechat.html#naklejkinaokna">Наклейки на окна</a>
+                <a class="sub-btn" href="shirokoformatnayapechat.html#brendirovanieavto">Брендирование авто</a>
+                <a class="sub-btn" href="shirokoformatnayapechat.html#fotooboi">Фотообои</a>
+                <a class="sub-btn" href="shirokoformatnayapechat.html#pechatnaholste">Печать на холсте</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingE1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="uslugi.html" data-toggle="collapse" data-target="#collapseE1" aria-expanded="false" aria-controls="collapseE1">
+                    УСЛУГИ
+                </a>
+            </h5>
+        </div>
+        <div id="collapseE1" class="collapse" aria-labelledby="headingE1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="uslugi.html#svarka">Сварочные услуги</a>
+                <a class="sub-btn" href="uslugi.html#frezer">Фрезерная резка</a>
+                <a class="sub-btn" href="uslugi.html#frezer">Лазерная резка</a>
+                <a class="sub-btn" href="uslugi.html#avtovyshka">Автовышка</a>
+                <a class="sub-btn" href="uslugi.html#designmontaj">Дизайн рекламы</a>
+                <a class="sub-btn" href="uslugi.html#designmontaj">Монтаж наружной рекламы</a>
+                <a class="sub-btn" href="uslugi.html#dostavka">Доставка</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingF1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="tipografiya.html" data-toggle="collapse" data-target="#collapseF1" aria-expanded="false" aria-controls="collapseF1">
+                    ТИПОГРАФИЯ
+                </a>
+            </h5>
+        </div>
+        <div id="collapseF1" class="collapse" aria-labelledby="headingF1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="tipografiya.html#operativnayapoligrafiya">Оперативная полиграфия</a>
+                <a class="sub-btn" href="tipografiya.html#vizitkilistovki">Визитки, листовки</a>
+                <a class="sub-btn" href="tipografiya.html#diskontnyekarty">Дисконтные пластиковые карты</a>
+                <a class="sub-btn" href="tipografiya.html#katalogimenyu">Каталоги, меню</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingG1">
+            <h5 class="mb-0">
+                <a class="nav-link main-btn" href="suvenirnayaprodukziya.html" data-toggle="collapse" data-target="#collapseG1" aria-expanded="false" aria-controls="collapseG1">
+                    СУВЕНИРНАЯ ПРОДУКЦИЯ
+                </a>
+            </h5>
+        </div>
+        <div id="collapseG1" class="collapse" aria-labelledby="headingG1" data-parent="#accordionMenu">
+            <div class="card-body">
+                <a class="sub-btn" href="suvenirnayaprodukziya.html#pechatnakruzhkah">Печать на кружках</a>
+                <a class="sub-btn" href="suvenirnayaprodukziya.html#pechatnatkani.">Печать на ткани</a>
+                <a class="sub-btn" href="suvenirnayaprodukziya.html#izdeliyaizdereva">Изделия из дерева</a>
+                <a class="sub-btn" href="suvenirnayaprodukziya.html#izdeliyaizakrila">Изделия из акрила</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- container-fluid with menu for desktops and content -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2 d-none d-lg-block">
+            <!-- Левое меню для десктопов -->
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link main-btn3" href="narujnayareklama.html">НАРУЖНАЯ РЕКЛАМА</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="narujnayareklama.html#obyemnyesvetovyebukvy">Объёмные световые буквы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="narujnayareklama.html#svetovyekoroba">Световые короба</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="narujnayareklama.html#oformleniyfasadov">Оформление фасадов</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="narujnayareklama.html#kryshnyeustanovki">Крышные установки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="narujnayareklama.html#panelkronshteyn">Панель-кронштейн</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="narujnayareklama.html#stelly">Стеллы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="narujnayareklama.html#bannery">Баннерные растяжки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="narujnayareklama.html#neonovayareklama">Неоновая реклама</a>
+                        </li>
+                      <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="narujnayareklama.html#adresnyetablichki">Адресные таблички</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link main-btn" href="interyernayareklama.html">ИНТЕРЬЕРНАЯ РЕКЛАМА</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#bukvynesvetovye">Буквы несветовые</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#psevdoobemnyebukvy">Псевдообъемные буквы</a>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#kristallajt">Кристаллайт</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#akrillajt">Акриллайт</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#ultratonkijlajtboks">Ультратонкий лайтбокс</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#informacionnyestendy">Информационные стенды</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#kabinetnyetablichki">Кабинетные таблички</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="interyernayareklama.html#oformleniemestprodazh">Оформление мест продаж</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link main-btn3" href="ledtablo.html">LED ТАБЛО</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="ledtablo.html#svetodiodnyebegushchiestrok">Светодиодные бегущие строки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="ledtablo.html#elektronnyekursoviki">Электронные курсовики</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link main-btn2" href="shirokoformatnayapechat.html">ШИРОКОФОРМАТНАЯ ПЕЧАТЬ / ВЫСОКОТОЧНАЯ ПЕЧАТЬ</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="shirokoformatnayapechat.html#banneryiperfobannery">Баннеры и перфобаннеры</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link sub-btn" href="shirokoformatnayapechat.html#plenkiiperfoplenki">Плёнки и перфоплёнки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="shirokoformatnayapechat.html#postery">Постеры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="shirokoformatnayapechat.html#naklejkinaokna">Наклейки на окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="shirokoformatnayapechat.html#brendirovanieavto">Брендирование авто</a>
+                        </li>
+                        <li class="nav-item">
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="shirokoformatnayapechat.html#fotooboi">Фотообои</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="shirokoformatnayapechat.html#pechatnaholste">Печать на холсте</a>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link main-btn3" href="uslugi.html#uslugi">УСЛУГИ</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="uslugi.html#svarka">Сварочные услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="uslugi.html#frezer">Фрезерная резка</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="uslugi.html#frezer">Лазерная резка</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="uslugi.html#avtovyshka">Автовышка</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="uslugi.html#designmontaj">Дизайн рекламы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="uslugi.html#designmontaj">Монтаж наружной рекламы</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="uslugi.html#dostavka">Доставка</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link main-btn3" href="tipografiya.html">ТИПОГРАФИЯ</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="tipografiya.html#operativnayapoligrafiya">Оперативная полиграфия</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="tipografiya.html#vizitkilistovki">Визитки, листовки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sub-btn" href="tipografiya.html#diskontnyekarty">Дисконтные пластиковые карты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="tipografiya.html#katalogimenyu">Каталоги, меню</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link main-btn" href="suvenirnayaprodukziya.html">СУВЕНИРНАЯ ПРОДУКЦИЯ</a>
+                    <ul class="nav flex-column ml-3">
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="suvenirnayaprodukziya.html#pechatnakruzhkah">Печать на кружках</a>
+                        </li>
+                      <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="suvenirnayaprodukziya.html#pechatnatkani">Печать на ткани</a>
+                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="suvenirnayaprodukziya.html#izdeliyaizdereva">Изделия из дерева</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link2 sub-btn" href="suvenirnayaprodukziya.html#izdeliyaizakrila">Изделия из акрила</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-9 offset-xl-1 ml-5">
+            <!-- Контент -->
+			
+<!-- Интерьерная реклама -->
+		<p id="interyernayareklama">&nbsp;</p><br>
+            <h1><font color="red">ИНТЕРЬЕРНАЯ РЕКЛАМА</font></h1>
+<p>Интерьерная реклама — это яркий и запоминающийся способ продвижения товаров и услуг, которые направлены на создание уникального атмосферы в помещениях. С помощью дизайна интерьеров можно эффективно донести информацию о бренде и подчеркнуть его индивидуальность. От витрин магазинов до оформления офисов и общественных пространств, интерьерная реклама играет важную роль в формировании восприятия компании.</p>
+
+<p>Одним из ключевых аспектов интерьерной рекламы является ее визуальная привлекательность. Использование ярких цветов, оригинальных текстур и художественных элементов помогает привлечь внимание потенциальных клиентов. Например, мебельные магазины часто используют изысканные выставочные пространства, где продукция сочетается с эстетически красивыми элементами, что позволяет покупателям не только оценить товар, но и представить его в своем доме.</p>
+
+<p>Также важным направлением интерьерной рекламы является использование технологий. Современные дисплеи, дополненная реальность и интерактивные панели позволяют создать уникальный опыт взаимодействия с продуктом. Например, в ресторанах и кафе можно установить экранные меню, которые динамически меняются в зависимости от времени суток или акций, что делает каждый визит уникальным.</p>
+
+<p>Интерьерная реклама также способствует формированию имиджа бренда. Она помогает компаниям создать узнаваемый стиль, который будет ассоциироваться с качеством и надежностью. Работая с опытными дизайнерами, бизнес может разработать концепцию, которая, отражая корпоративные ценности, станет важной частью общего восприятия.</p>
+
+<p>Не менее важным аспектом является внимание к функциональности. Хорошо организованное пространство не только привлекает клиентов, но и обеспечивает комфортное взаимодействие с продуктами. Например, правильное размещение рекламных материалов в магазине может улучшить поток покупателей и повысить уровень продаж.</p>
+
+<p>Таким образом, интерьерная реклама — это мощный инструмент, объединяющий креативность и стратегический подход. Она позволяет брендам выделяться на фоне конкурентов, создавать положительный опыт для клиентов и, в конечном итоге, способствовать росту бизнеса.</p>
+<div class="gallery">
+    <img src="images/interjer1.jpg" alt="interjer1" data-aos="zoom-in" />
+    <img src="images/interjer2.jpg" alt="interjer2" data-aos="zoom-in" />
+    <img src="images/interjer3.jpg" alt="interjer3" data-aos="zoom-in" />
+    <img src="images/interjer4.jpg" alt="interjer4" data-aos="zoom-in" />
+    <img src="images/interjer5.jpg" alt="interjer5" data-aos="zoom-in" />
+    <img src="images/interjer6.jpg" alt="interjer6" data-aos="zoom-in" />
+    <img src="images/interjer7.jpg" alt="interjer7" data-aos="zoom-in" />
+    <img src="images/interjer8.jpg" alt="interjer8" data-aos="zoom-in" />
+    <img src="images/interjer9.jpg" alt="interjer9" data-aos="zoom-in" />
+</div>
+
+
+<!-- Буквы несветовые -->
+		<p id="bukvynesvetovye">&nbsp;</p><br>
+            <h1><a href="interyernayareklama.html#interyernayareklama" style="color: red;">ИНТЕРЬЕРНАЯ РЕКЛАМА</a></h1>
+            <h2>Несветовые буквы</h2>
+<p>Несветовые буквы очень популярны в сфере интерьерной рекламы. Они представляют собой уникальный способ передачи информации и создания атмосферы в пространстве. Главным их преимуществом является универсальность: такие буквы могут быть использованы как в коммерческих, так и в жилых интерьерах. Они позволяют эффектно донести бренд до потребителя и подчеркнуть уникальность заведения.</p>
+
+<p>В отличие от световых вывесок, несветовые буквы не требуют подключения к электросетям и обладают более низкими затратами на установку и обслуживание. Это делает их идеальными для долгосрочного использования в помещениях, где важен правильный акцент на дизайне. Буквы могут быть выполнены из различных материалов — акрила, дерева, металла или ПВХ — и легко адаптируются под стиль интерьера.</p>
+
+<p>Одним из важных аспектов несветовых букв является их способность гармонично вписываться в общую концепцию дизайна помещения. Они могут служить как информационным носителем, так и элементом декора. Например, буквы из дерева хорошо смотрятся в кафе с уютной атмосферой, а металлические — в стильных современных офисах.</p>
+
+<p>Кроме того, несветовые буквы могут быть оформлены разными способами — от классической типографии до художественной резьбы и трехмерных форм. Это позволяет дизайнеру проявить креативность и разработать уникальное решение, которое станет центральным элементом интерьера. Такие буквы могут содержать не только название компании, но и слоганы, миссию или девиз, что создает дополнительную связь с клиентами.</p>
+
+<p>Не стоит забывать и о практической стороне вопроса. Несветовые буквы легко монтируются и демонстрируются, что делает их идеальными для временных акций или мероприятий. Их можно быстро заменить или адаптировать в зависимости от меняющихся условий бизнеса.</p>
+
+<p>Таким образом,  несветовые буквы являются отличным решением для интерьерной рекламы. Они обеспечивают визуальную привлекательность и функциональность, не перегружая пространство и подчеркивая индивидуальность бренда. Этот вид рекламы продолжает набирать популярность, предлагая бесконечные возможности для креативных решений в области дизайна.</p>
+<div class="gallery">
+	<img src="images/nesvetovye1.jpg" alt="nesvetovye1" data-aos="zoom-in" />
+    <img src="images/nesvetovye2.jpg" alt="nesvetovye2" data-aos="zoom-in" />
+    <img src="images/nesvetovye3.jpg" alt="nesvetovye3" data-aos="zoom-in" />
+	<!--
+    <img src="images/nesvetovye4.jpg" alt="nesvetovye4" data-aos="zoom-in" />
+    <img src="images/nesvetovye5.jpg" alt="nesvetovye5" data-aos="zoom-in" />
+    <img src="images/nesvetovye6.jpg" alt="nesvetovye6" data-aos="zoom-in" />
+    <img src="images/nesvetovye7.jpg" alt="nesvetovye7" data-aos="zoom-in" />
+    <img src="images/nesvetovye8.jpg" alt="nesvetovye8" data-aos="zoom-in" />
+    <img src="images/nesvetovye9.jpg" alt="nesvetovye9" data-aos="zoom-in" />
+	-->
+</div>
+
+<!-- Псевдообъемные буквы -->
+            <p id="psevdoobemnyebukvy">&nbsp;</p><br>
+            <h1><a href="interyernayareklama.html#interyernayareklama" style="color: red;">ИНТЕРЬЕРНАЯ РЕКЛАМА</a></h1>
+            <h2>Псевдообъемные буквы</h2>
+<p>Псевдообъемные буквы – это один из самых современных и стильных способов представления информации, который набирает популярность в сфере интерьерной рекламы. Такие буквы создают эффект глубины и объемности, что позволяет им выделяться на фоне традиционных плоских вывесок. Благодаря своему дизайну, псевдообъемные буквы привлекают внимание и делают любое рекламное сообщение более запоминающимся.</p>
+
+<p>Концепция псевдообъемных букв заключается в использовании различных материалов и технологий, позволяющих создать визуальный эффект объемности при минимальных затратах. Они могут быть изготовлены из акрила, алюминия или дерева и могут окрашиваться в любые цвета, что открывает широкий спектр дизайнерских решений. Такие буквы часто используют для оформления магазинов, ресторанов, офисов и выставочных стендов, так как они отлично вписываются в любой интерьер.</p>
+
+<p>Важным аспектом использования псевдообъемных букв является их освещение. LED-подсветка, встроенная в конструкцию, позволяет создать эффектный световой обрамление, что делает буквы видимыми даже в вечернее время. Особый акцент на освещение подчеркивает стиль и индивидуальность бренда, а также улучшает воспринимаемость информации.</p>
+
+<p>Кроме того, псевдообъемные буквы могут быть использованы в рамках разных рекламных кампаний. Они можно легко адаптировать под сезонные изменения, создав уникальные предложения или мероприятия, которые привлекут внимание клиентов. Такая гибкость в использовании делает их идеальным инструментом для маркетологов и дизайнеров.</p>
+
+<p>С точки зрения установки, псевдообъемные буквы достаточно удобны в работе. Их можно монтировать на различные поверхности, и при необходимости легко демонтировать. Это свойство особенно ценно для арендованных пространств, где возможность временной установки и демонтажа является важным аспектом.</p>
+
+<p>В заключение, псевдообъемные буквы – это не только стильное, но и функциональное решение для интерьерной рекламы. Они позволяют брендам выделяться и привлекать внимание, создавая уникальный визуальный опыт для каждого клиента. Выбор таких букв – это шаг к современному имиджу вашего бизнеса и возможность эффективно донести идею до аудитории.</p>
+<div class="gallery">
+    <img src="images/psevdoobjem1.jpg" alt="psevdoobjem1" data-aos="zoom-in" />
+    <img src="images/psevdoobjem2.jpg" alt="psevdoobjem2" data-aos="zoom-in" />
+    <img src="images/psevdoobjem3.jpg" alt="psevdoobjem3" data-aos="zoom-in" />
+	<!--
+    <img src="images/psevdoobjem4.jpg" alt="psevdoobjem4" data-aos="zoom-in" />
+    <img src="images/psevdoobjem5.jpg" alt="psevdoobjem5" data-aos="zoom-in" />
+    <img src="images/psevdoobjem6.jpg" alt="psevdoobjem6" data-aos="zoom-in" />
+    <img src="images/psevdoobjem7.jpg" alt="psevdoobjem7" data-aos="zoom-in" />
+    <img src="images/psevdoobjem8.jpg" alt="psevdoobjem8" data-aos="zoom-in" />
+    <img src="images/psevdoobjem9.jpg" alt="psevdoobjem9" data-aos="zoom-in" />
+	-->
+</div>
+
+<!-- Кристаллайт -->
+            <p id="kristallajt">&nbsp;</p><br>
+			<h1><a href="interyernayareklama.html#interyernayareklama" style="color: red;">ИНТЕРЬЕРНАЯ РЕКЛАМА</a></h1>
+            <h2>Кристаллайт</h2>
+<p>Кристаллайт – это не просто продукт, это целая философия, которая привносит в интерьер особенный шарм и уют. Используя высококачественные материалы и инновационные технологии, Кристаллайт предлагает широкий ассортимент рекламных решений, которые помогут выделить ваш бизнес на фоне конкурентов. Визуальная реклама играет важную роль в привлечении клиентов, и Кристаллайт предоставляет уникальные способы сделать это с помощью стильных и современных решений.</p>
+
+<p>Одно из главных преимуществ Кристаллайт – это возможность создавать оригинальные и нестандартные элементы для оформления интерьера. Благодаря разнообразию форм, цветов и текстур, каждая рекламная вывеска или элемент декора становится не просто средством коммуникации, но и частью общего стиля помещения. Это особенно актуально для кафе, ресторанов, магазинов и офисов, где каждая деталь должна подчеркивать индивидуальность бренда.</p>
+
+<p>Важным аспектом интерьеров с использованием Кристаллайт является их адаптивность. Продукты могут легко вписываться в различные стили и концепции – от минимализма до роскошного классики. Благодаря этому, каждое пространство становится уникальным, а рекламные элементы гармонично дополняют общую атмосферу.</p>
+
+<p>Кроме эстетической составляющей, Кристаллайт акцентирует внимание на функциональности своих решений. Яркие и заметные рекламные вывески привлекают внимание, способствуя увеличению потока клиентов. Это особенно важно для бизнеса, стремящегося к росту и развитию в условиях высокой конкуренции.</p>
+
+<p>Таким образом, кристаллайт – это идеальное решение для тех, кто хочет разместить свою рекламу в интерьере не только эффективно, но и стильно. С помощью продуктов Кристаллайт вы сможете создать уникальное пространство, где реклама будет работать на вас, привлекая и удерживая внимание клиентов на протяжении долгого времени.</p>
+<div class="gallery">
+    <img src="images/kristallajt1.jpg" alt="kristallajt1" data-aos="zoom-in" />
+    <img src="images/kristallajt2.jpg" alt="kristallajt2" data-aos="zoom-in" />
+    <img src="images/kristallajt3.jpg" alt="kristallajt3" data-aos="zoom-in" />
+	<!--
+    <img src="images/kristallajt4.jpg" alt="kristallajt4" data-aos="zoom-in" />
+    <img src="images/kristallajt5.jpg" alt="kristallajt5" data-aos="zoom-in" />
+    <img src="images/kristallajt6.jpg" alt="kristallajt6" data-aos="zoom-in" />
+    <img src="images/kristallajt7.jpg" alt="kristallajt7" data-aos="zoom-in" />
+    <img src="images/kristallajt8.jpg" alt="kristallajt8" data-aos="zoom-in" />
+    <img src="images/kristallajt9.jpg" alt="kristallajt9" data-aos="zoom-in" />
+	-->
+</div>
+
+<!-- Акриллайт -->
+            <p id="akrillajt">&nbsp;</p><br>
+            <h1><a href="interyernayareklama.html#interyernayareklama" style="color: red;">ИНТЕРЬЕРНАЯ РЕКЛАМА</a></h1>
+            <h2>Акриллайт</h2>
+<p>Акриллайт — это современное решение для интерьеров, которое активно используется в рекламе и оформления пространства. Эти вывески представляют собой прозрачные акриловые панели с выгравированными текстами и рисунками, которые подсвечиваются светодиодами с торцов. Они идеально подходят для как коммерческих, так и частных помещений, создавая стильный и запоминающийся образ.</p>
+
+<p>Основные преимущества акриллайтов заключаются не только в их эстетической привлекательности, но и в функциональности. Благодаря прозрачному материалу и возможности регулировки яркости подсветки, акриллайты могут быть адаптированы под любые условиях освещения и индивидуальные предпочтения. Они отлично смотрятся как в дневное, так и в вечернее время, привлекая внимание прохожих и гостей.</p>
+
+<p>В оформлении интерьера акриллайты играют роль не только рекламного элемента, но и полноценного декоративного объекта. Их можно использовать в ресторанах, магазинах, офисах и даже в домашних условиях. Выгравированные изображения и тексты могут быть выполнены в самых разных стилях, от минимализма до яркого графического дизайна, что позволяет гармонично интегрировать их в любой интерьер.</p>
+
+<p>Еще одним важным аспектом акриллайтов является их долговечность и простота в обслуживании. Акрил, из которого они изготовлены, устойчив к механическим повреждениям и воздействию влаги, что делает их идеальными для использования в помещениях с разными климатическими условиями. Также такие вывески легко очищаются от загрязнений, что позволяет сохранять их презентабельный внешний вид на протяжении длительного времени.</p>
+
+<p>Акриллайт также может использоваться для создания уникальных атмосферных решений. Например, освещенные вывески могут стать центральным элементом декора, привнося в интерьер чувство уюта и стиля. Подсветка может быть настроена на разные режимы: статичную, мерцающую или динамичную, что добавляет дополнительную изюминку в восприятие пространства.</p>
+
+<p>Акриллайт — это не просто вывеска, а целый инструмент для создания неповторимого стиля и атмосферы в интерьере. С сочетанием элегантного дизайна, функциональности и долговечности, они становятся идеальным выбором для бизнеса и частных клиентов, стремящихся выделиться и оставить яркое впечатление.</p>
+<div class="gallery">
+    <img src="images/akrillayt1.jpg" alt="akrillayt1" data-aos="zoom-in" />
+    <img src="images/akrillayt2.jpg" alt="akrillayt2" data-aos="zoom-in" />
+    <img src="images/akrillayt3.jpg" alt="akrillayt3" data-aos="zoom-in" />
+	<!--
+    <img src="images/akrillayt4.jpg" alt="akrillayt4" data-aos="zoom-in" />
+    <img src="images/akrillayt5.jpg" alt="akrillayt5" data-aos="zoom-in" />
+    <img src="images/akrillayt6.jpg" alt="akrillayt6" data-aos="zoom-in" />
+    <img src="images/akrillayt7.jpg" alt="akrillayt7" data-aos="zoom-in" />
+    <img src="images/akrillayt8.jpg" alt="akrillayt8" data-aos="zoom-in" />
+    <img src="images/akrillayt9.jpg" alt="akrillayt9" data-aos="zoom-in" />
+	-->
+</div>
+
+<!-- Ультратонкий лайтбокс -->
+            <p id="ultratonkijlajtboks">&nbsp;</p><br>
+            <h1><a href="interyernayareklama.html#interyernayareklama" style="color: red;">ИНТЕРЬЕРНАЯ РЕКЛАМА</a></h1>
+            <h2>Ультратонкий лайтбокс</h2>
+<p>В современном мире рекламные решения становятся всё более изысканными и привлекательными. Ультратонкий лайтбокс — это отличный пример такого подхода. Он представляет собой стильный световой короб, который не только эффективно привлекает внимание, но и идеально вписывается в любой интерьер. Его конструкция состоит из анодированного отщелкивающего профиля, что обеспечивает долговечность и эстетичный внешний вид.</p>
+
+<p>Одной из ключевых особенностей ультратонкого лайтбокса является его панель из акрила, на которую наносится качественная УФ-печать. Эта технология обеспечивает яркость и насыщенность цветов, что делает изображение на лайтбоксе живым и выразительным. Акрил обладает отличными светопропускными свойствами, благодаря чему реклама выглядит эффектно даже при умеренном освещении.</p>
+
+<p>Использование гибких сверхярких светодиодных лент в качестве источника освещения позволяет создать равномерное и яркоеillumination, что делает изображение ещё более заметным. Светодиоды не только энергоэффективны, но и имеют длительный срок службы, что существенно снижает эксплуатационные расходы. Это делает лайтбокс не только эстетичным, но и выгодным решением для бизнеса.</p>
+
+<p>Ультратонкий лайтбокс идеально подходит для использования в различных помещениях — магазинах, ресторанах, офисах и выставочных залах. Он может выполнять функции как рекламной, так и информационной вывески. С его помощью легко донести до клиентов важные сообщения, акционные предложения или новые поступления товаров.</p>
+
+<p>Таким образом, ультратонкий лайтбокс представляет собой не просто средство рекламы, а полноценный элемент интерьера. Он гармонично дополняет пространство, создавая уникальную атмосферу и привлекая клиентов. Реклама, выполненная с его помощью, запоминается надолго, а качество исполнения и применение современных технологий делают его неотъемлемой частью успешной рекламной стратегии.</p>
+<div class="gallery">
+    <img src="images/ultra1.jpg" alt="ultra1" data-aos="zoom-in" />
+    <img src="images/ultra2.jpg" alt="ultra2" data-aos="zoom-in" />
+    <img src="images/ultra3.jpg" alt="ultra3" data-aos="zoom-in" />
+	<!--
+    <img src="images/ultra4.jpg" alt="ultra4" data-aos="zoom-in" />
+    <img src="images/ultra5.jpg" alt="ultra5" data-aos="zoom-in" />
+    <img src="images/ultra6.jpg" alt="ultra6" data-aos="zoom-in" />
+    <img src="images/ultra7.jpg" alt="ultra7" data-aos="zoom-in" />
+    <img src="images/ultra8.jpg" alt="ultra8" data-aos="zoom-in" />
+    <img src="images/ultra9.jpg" alt="ultra9" data-aos="zoom-in" />
+	-->
+</div>
+
+<!-- Информационные стенды -->
+            <p id="informacionnyestendy">&nbsp;</p><br>
+			<h1><a href="interyernayareklama.html#interyernayareklama" style="color: red;">ИНТЕРЬЕРНАЯ РЕКЛАМА</a></h1>
+            <h2>Информационные стенды</h2>
+<p>Информационные стенды являются важным элементом интерьерной рекламы, который не только передает информацию, но и создает атмосферу в помещении. Их наличие позволяет брендам эффективно коммуницировать с целевой аудиторией, привлекая внимание к товарам и услугам. Такие стенды легко вписываются в различные стили интерьера и могут служить как акцентами, так и фоновыми элементами.</p>
+
+<p>Одной из основных задач информационных стендов является информирование клиентов. Они могут содержать данные о новом продукте, текущих акциях или услугах. Это позволяет посетителям быстро получить необходимую информацию без помощи сотрудников, что особенно важно в условиях современного рынка, где время играет ключевую роль.</p>
+
+<p>Информационные стенды могут быть выполнены в различных форматах — от настенных плакатов до мобильных конструкций. Их дизайн подбирается с учетом имиджа компании и стильных решений интерьера. Используя различные материалы, такие как акрил, металл или дерево, можно создать уникальные стенды, которые подчеркивают индивидуальность бренда.</p>
+
+<p>Кроме того, информационные стенды могут интегрироваться с цифровыми технологиями. Мультимедийные панели и электронные дисплеи позволяют динамически обновлять информацию, что делает их эффективным инструментом для передачи актуальных данных. Это особенно полезно для ресторанов, магазинов и ивент-агентств, где информация может меняться часто.</p>
+
+<p>Функциональность таких стендов также включает в себя их роль в навигации. Они могут помочь посетителям ориентироваться в магазине или офисе, показывая расположение отделов и предлагая краткие инструкции. Эффективно оформленные навигационные стенды способны повысить уровень комфорта клиентского опыта.</p>
+
+<p>В заключение, информационные стенды в интерьерной рекламе являются незаменимым инструментом для бизнеса. Они помогают не только в информировании, но и в создании уникальной атмосферы, улучшая взаимодействие с клиентами и подчеркивая индивидуальность бренда. Правильный подход к их дизайну и размещению может существенно повысить эффективность рекламных кампаний и увеличить лояльность клиентов.</p>
+<div class="gallery">
+    <img src="images/stendy1.jpg" alt="stendy1" data-aos="zoom-in" />
+    <img src="images/stendy2.jpg" alt="stendy2" data-aos="zoom-in" />
+    <img src="images/stendy3.jpg" alt="stendy3" data-aos="zoom-in" />
+	<!--
+    <img src="images/stendy4.jpg" alt="stendy4" data-aos="zoom-in" />
+    <img src="images/stendy5.jpg" alt="stendy5" data-aos="zoom-in" />
+    <img src="images/stendy6.jpg" alt="stendy6" data-aos="zoom-in" />
+    <img src="images/stendy7.jpg" alt="stendy7" data-aos="zoom-in" />
+    <img src="images/stendy8.jpg" alt="stendy8" data-aos="zoom-in" />
+    <img src="images/stendy9.jpg" alt="stendy9" data-aos="zoom-in" />
+	-->
+</div>
+
+<!-- Кабинетные таблички -->
+            <p id="kabinetnyetablichki">&nbsp;</p><br>
+			<h1><a href="interyernayareklama.html#interyernayareklama" style="color: red;">ИНТЕРЬЕРНАЯ РЕКЛАМА</a></h1>
+            <h2>Кабинетные таблички</h2>
+<p>Кабинетные таблички — это не просто декоративные элементы пространства, но и важная часть интерьерной рекламы. Они выполняют несколько функций: от информирования до создания имиджа компании. Такие таблички могут указывать на функциональное назначение помещений, представлять сотрудников или акцентировать внимание на важных правилах и нормах. Эстетический аспект также имеет значение, так как качественная табличка может как дополнить интерьер, так и стать его ярким акцентом.</p>
+
+<p>Современные технологии позволяют изготавливать кабинетные таблички из различных материалов — от классических металлов и пластика до дерева и акрила. Выбор материала влияет не только на внешний вид, но и на долговечность изделия. Например, акриловые таблички выглядят стильно и современно, в то время как деревянные могут добавить интерьеру тепла и уюта. Каждый бизнес может подобрать оптимальный вариант, учитывая свои корпоративные цвета и стиль.</p>
+
+<p>Дизайн табличек также играет ключевую роль в создании подъема корпоративного духа. Элементы графики, шрифты и цветовые решения могут отразить индивидуальность компании. При этом важно помнить о читаемости текстов и их размещении. Таблички должны быть заметными, но не навязчивыми, чтобы гармонично вписываться в общий интерьер.</p>
+
+<p>Кроме того, кабинетные таблички могут стать средством внутренней рекламы. Например, размещение информации о текущих акциях, мероприятиях или новостях компании прямо в рабочем пространстве поможет поддерживать высокий уровень вовлеченности сотрудников и посетителей. Такой подход также способствует формированию более открытой и коммуникабельной атмосферы внутри коллектива.</p>
+
+<p>Не стоит забывать и о сфере применения кабинетных табличек. Они могут использоваться не только в офисах, но и в учебных заведениях, медицинских учреждениях, гостиницах и пр. В каждом из этих случаев таблички должны быть адаптированы с учётом специфики и задач конкретного пространства.</p>
+
+<p>Кабинетные таблички — это важный элемент интерьерной рекламы, который не только выполняет практические функции, но и способствует формированию нужного имиджа компании. С учетом разнообразия материалов и дизайна, каждый бизнес может создать уникальное пространство, которое будет вдохновлять, привлекать клиентов и повышать моральный дух сотрудников.</p>
+<div class="gallery">
+    <img src="images/kabinet1.jpg" alt="kabinet1" data-aos="zoom-in" />
+    <img src="images/kabinet2.jpg" alt="kabinet2" data-aos="zoom-in" />
+    <img src="images/kabinet3.jpg" alt="kabinet3" data-aos="zoom-in" />
+	<!--
+    <img src="images/kabinet4.jpg" alt="kabinet4" data-aos="zoom-in" />
+    <img src="images/kabinet5.jpg" alt="kabinet5" data-aos="zoom-in" />
+    <img src="images/kabinet6.jpg" alt="kabinet6" data-aos="zoom-in" />
+    <img src="images/kabinet7.jpg" alt="kabinet7" data-aos="zoom-in" />
+    <img src="images/kabinet8.jpg" alt="kabinet8" data-aos="zoom-in" />
+    <img src="images/kabinet9.jpg" alt="kabinet9" data-aos="zoom-in" />
+	-->
+</div>
+
+
+<!-- Оформление мест продаж -->
+            <p id="oformleniemestprodazh">&nbsp;</p><br>
+			<h1><a href="interyernayareklama.html#interyernayareklama" style="color: red;">ИНТЕРЬЕРНАЯ РЕКЛАМА</a></h1>
+            <h2>Оформление мест продаж</h2>
+<p>Оформление мест продаж с помощью интерьерной рекламы является одним из ключевых аспектов создания привлекательной и эффективной торговой среды. Интерьерная реклама включает в себя разнообразные элементы: от вывесок и стендов до дисплеев и графических панно. Эти элементы не только информируют клиентов о товарах и услугах, но и формируют общее впечатление о бренде, подчеркивают его стиль и ценности.</p>
+
+<p>Существуют различные форматы интерьерной рекламы, которые можно адаптировать в зависимости от типа бизнеса и целевой аудитории. Например, в бутиках и магазинах одежды часто используются стильные манекены и витрины с заманчивыми компоновками, тогда как в продуктовых магазинах популярны акцентные изображения товаров, привлекающие внимание покупателей. Уникальные дизайнерские решения помогают выделить пространство, сделав его более уютным и запоминающимся.</p>
+
+<p>Важным аспектом интерьерной рекламы является её функциональность. Элементы оформления должны не только привлекать внимание, но и облегчать восприятие информации. Четкость и простота подачи рекламного материала помогают покупателям быстро находить нужные товары и услуги. Правильно подобранные шрифты, цвета и изображения способны создать гармоничную атмосферу и направить клиентское внимание на ключевые моменты.</p>
+
+<p>Не менее важным является и эмоциональное воздействие интерьерной рекламы. Красивые и качественные визуальные элементы вызывают положительные эмоции, формируя у клиента желание сделать покупку. Эмоции играют значительную роль в принятии решений, поэтому использование ярких и оригинальных решений способствует увеличению конверсии и укреплению лояльности клиентов.</p>
+
+<p>Для создания эффективной интерьерной рекламы необходимо учитывать не только эстетическую составляющую, но и принципы маркетинга. Важно проводить анализ целевой аудитории и изучать её предпочтения, чтобы реклама действительно находила отклик у клиентов. Правильно подобранная стратегия оформления мест продаж позволит не только привлечь новых клиентов, но и удержать существующих.</p>
+
+<p>В заключение, интерьерная реклама – это мощный инструмент для бизнеса, способствующий созданию уникального покупательского опыта. Инвестирование в оформление торговых точек принесет свои плоды, повысив не только привлекательность пространства, но и эффективность продаж. Чем ярче и креативнее будет интерьерная реклама, тем больше шансов, что магазин станет любимым местом для шопинга.</p>
+<div class="gallery">
+    <img src="images/mestoprodaj1.jpg" alt="mestoprodaj1" data-aos="zoom-in" />
+    <img src="images/mestoprodaj2.jpg" alt="mestoprodaj2" data-aos="zoom-in" />
+    <img src="images/mestoprodaj3.jpg" alt="mestoprodaj3" data-aos="zoom-in" />
+    <img src="images/mestoprodaj4.jpg" alt="mestoprodaj4" data-aos="zoom-in" />
+    <img src="images/mestoprodaj5.jpg" alt="mestoprodaj5" data-aos="zoom-in" />
+    <img src="images/mestoprodaj6.jpg" alt="mestoprodaj6" data-aos="zoom-in" />
+</div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	
+</div>
+</div>
+
+	
+	<!-- AOS --> 	
+	<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

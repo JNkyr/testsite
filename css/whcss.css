@@ -1,0 +1,31 @@
+#whatsapp-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#phone-options {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 100; /* Ensure it's on top */
+}
+
+#phone-options .option {
+    padding: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
